@@ -1,6 +1,14 @@
+# ansibles
+docker run -v ${PWD}:/ansible  -it ansible:v2 /bin/bash
+
+# ansible config files 
+cd /etc/ansible
+
 
 # to build a docker file 
 docker build -t alxprov/node-web-app .
+
+docker build -f Dockerfile.db -t alxprov/node-web-app-database .
 
 # to run the docker 
 docker run -p 80:8080 -d alxprov/node-web-app
@@ -8,3 +16,6 @@ docker run -p 80:8080 -d alxprov/node-web-app
 # test for volumes 
 docker run -p 80:8080 -v ${PWD}:/usr/src/app  -d alxprov/node-web-app
 docker run -p 80:8080 -v ${PWD}:/usr/src/app  -it alxprov/node-web-app
+
+
+docker build -t alxprov/node-web-app . --build-arg SSH_PRIVATE_KEY=/Users/alexprovencher/.ssh/id_rsa --no-cache
