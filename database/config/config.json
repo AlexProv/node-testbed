@@ -1,0 +1,9 @@
+{
+  "development": {
+    "username": "docker",
+    "password": "dockerpass",
+    "database": "testbed",
+    "host": "172.17.0.2",
+    "dialect": "postgres"
+  }
+}
