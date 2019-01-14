@@ -1,6 +1,12 @@
 FROM node:10.14
 
 # Create app directory
+
+RUN apt-get update && \
+      apt-get -y install sudo
+
+RUN useradd -m docker && echo "docker:docker" | chpasswd && adduser docker sudo
+
 WORKDIR /usr/src/app
 
 # Install app dependencies
