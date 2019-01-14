@@ -1,8 +1,3 @@
-# ansibles
-docker run -v ${PWD}:/ansible  -it ansible:v4 /bin/bash
-
-# ansible config files 
-cd /etc/ansible
 
 # to run the docker 
 docker run -p 80:8080 -d alxprov/node-web-app
