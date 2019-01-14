@@ -1,3 +1,4 @@
 #!/bin/sh
 
+cd /usr/src/app/database
 /usr/src/app/node_modules/.bin/sequelize db:migrate
